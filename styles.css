@@ -1,0 +1,238 @@
+/*    Variables    */
+
+:root {
+  --color-titulos: #101828;
+  --color-textos: #a7acb9;
+  --color-nombre-fecha: #6941c6;
+}
+
+* {
+  margin: 0px;
+  border: 0px;
+  font-family: "Display xs/Semibold", sans-serif;
+  color: var(--color-textos);
+  gap: 30px;
+}
+
+/*    Modelo Para computador   */
+
+@media (min-width: 480px) {
+  body {
+    padding: 0px 50px 0px 50px;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .titulo {
+    color: var(--color-titulos);
+    font-size: 50px;
+  }
+
+  .descripcion {
+    color: var(--color-textos);
+    width: 55%;
+    text-align: center;
+  }
+
+  h4 {
+    color: var(--color-nombre-fecha);
+  }
+
+  p {
+    color: var(--color-textos);
+    font-size: 14px;
+    padding-top: 15px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    padding: 0px 10px 0px 8px;
+    border-radius: 25%;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  #barra_nav {
+    display: flex;
+    align-items: center;
+  }
+
+  input {
+    border: 1px solid var(--color-textos);
+    border-radius: 5px;
+    padding: 10px 100px 10px 8px;
+  }
+
+  button {
+    background-color: #9377d6;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 10px;
+
+    border: none;
+    font-size: 16px;
+    font-family: "Display xs/Semibold", sans-serif;
+    cursor: pointer;
+    height: 38px;
+  }
+
+  .subtitulos {
+    color: var(--color-titulos);
+    font-size: 20px;
+    padding-left: 32px;
+  }
+  .card_1 {
+    display: grid;
+    padding: 32px 32px 96px 32px;
+    grid-template-areas:
+      "a b"
+      "a c";
+    gap: 32px;
+  }
+
+  .card_1 img {
+    width: 340px;
+    height: 220px;
+  }
+
+  .card_1 h5 {
+    color: var(--color-nombre-fecha);
+    font-size: 14px;
+    padding: 15px 0px 15px 0px;
+    text-align: left;
+  }
+
+  .card_1 h3 {
+    color: var(--color-titulos);
+    font-size: 24px;
+    padding-bottom: 15px;
+  }
+
+  .card_1 p {
+    color: var(--color-textos);
+    font-size: 16px;
+    padding-bottom: 15px;
+  }
+
+  .card_1 ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    padding-left: 0px;
+  }
+
+  .card_1:first-child {
+    grid-area: a;
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card_1:first-child img {
+    width: 500px;
+    height: 520px;
+  }
+
+  .card_2 {
+    display: grid;
+    padding: 32px 32px 96px 32px;
+    grid-template-areas:
+      "a b c"
+      "d e f";
+    gap: 32px;
+  }
+
+  .card_2 img {
+    width: 350px;
+    height: 220px;
+  }
+
+  .card_2 h5 {
+    color: var(--color-nombre-fecha);
+    font-size: 14px;
+    padding: 15px 0px 15px 0px;
+  }
+
+  .card_2 h3 {
+    color: var(--color-titulos);
+    font-size: 24px;
+    padding-bottom: 15px;
+  }
+
+  .card_2 p {
+    color: var(--color-textos);
+    font-size: 16px;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+
+  .card_2 ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    font-size: 14px;
+    padding-left: 0px;
+  }
+
+  .paginacion {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .paginacion ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .paginacion li {
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .paginacion li.active {
+    font-weight: bold;
+  }
+}
+
+/*    Modelos Para Celular    */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 59px 38px 27px 46px;
+}
+
+.titulo {
+  color: var(--color-titulos);
+}
+
+h4 {
+  color: var(--color-nombre-fecha);
+}
+
+button {
+  background-color: #9377d6;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 10px;
+  border: none;
+  font-size: 16px;
+  font-family: "Display xs/Semibold", sans-serif;
+}
