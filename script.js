@@ -26,10 +26,12 @@ function renderizarInfo(info) {
     return `
         <article>
             <img src= "${info.imagen}" alt= "${info.nombre}">
-            <h5>${info.autor} • ${info.fecha}</h5>
-            <h3>${info.nombre}</h3>
-            <p>${info.descripcion}</p>
-            <ul>${renderizarEtiquetas(info.etiquetas)}</ul>  
+            <article>
+                <h5>${info.autor} • ${info.fecha}</h5>
+                <h3>${info.nombre}<i class="arrow fa-solid fa-arrow-up-right-from-square"></i></h3>
+                <p>${info.descripcion}</p>
+                <ul>${renderizarEtiquetas(info.etiquetas)}</ul> 
+            <article> 
         </article>
 
     `
@@ -57,6 +59,7 @@ function crearPaginacion() {
     paginationList.innerHTML = "";
 
     for (let i = 1; i <= paginasTotales; i++) {
+
         const listItem = document.createElement("li");
         listItem.textContent = i;
         if (i === paginaActual) {
