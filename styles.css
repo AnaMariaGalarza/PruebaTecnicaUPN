@@ -17,7 +17,7 @@
 /*    Modelos Para Celular    */
 
 body {
-  padding: 0px 50px 0px 50px;
+  padding: 0px 50px 0px 30px;
 }
 
 header {
@@ -25,21 +25,59 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+h4{
+padding-top: 30px;
 }
 
 .titulo {
   color: var(--color-titulos);
+  text-align: center;
+}
+
+#barra_nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left; 
+  gap: 10px;
+} 
+
+input {
+  border: 1px solid var(--color-textos);
+  border-radius: 5px;
+  text-align: left;
+  padding: 10px 190px 10px 10px;
+}
+
+p {
+  color: var(--color-textos);
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+a {
+  text-decoration: underline;
+}
+.subtitulos {
+  color: var(--color-titulos);
+  font-size: 25px;
+  padding: 15px 0px 15px 0px;
 }
 
 h4 {
   color: var(--color-nombre-fecha);
+  text-align: center;
 }
 
 button {
   background-color: #9377d6;
   color: white;
   border-radius: 5px;
-  padding: 10px 10px;
+  padding: 10px 150px;
   border: none;
   font-size: 16px;
   font-family: "Display xs/Semibold", sans-serif;
@@ -49,7 +87,7 @@ footer {
   display: grid;
   flex-direction: center;
   justify-content: center;
-  padding: 32px 32px 96px 32px;
+  padding: 32px 30px 60px 10px;
   grid-template-areas:
     "a b c";
   gap: 32px;
@@ -59,8 +97,21 @@ footer {
   display: none;
 }
 
+.card_1 img {
+  width: 340px;
+  height: 220px;
+}
+
 #paginado{
   display: flex;
+  color: var(--color-textos);
+  flex-direction: center;
+  justify-content: center;
+  padding: 0px 30px 0px 30px;
+}
+
+h6{
+  display: none;
 }
 
 .card_2 article:nth-child(n+4){
@@ -94,6 +145,7 @@ footer {
   align-items: left;
   font-size: 14px;
   padding-left: 0px;
+  padding-bottom: 30px;
 }
 
 .card_1 h5 {
@@ -122,6 +174,7 @@ footer {
   justify-content: left;
   align-items: left;
   padding-left: 0px;
+  padding-bottom: 30px;
 }
 
 .arrow {
@@ -175,10 +228,16 @@ footer {
     text-decoration: underline;
   }
 
+  .privacy {
+    cursor: pointer;
+  }
+
   #barra_nav {
     display: flex;
     align-items: center;
-  }
+    justify-content: center; 
+    flex-direction: row;
+  } 
 
   input {
     border: 1px solid var(--color-textos);
@@ -191,7 +250,7 @@ footer {
     color: white;
     border-radius: 5px;
     padding: 10px 10px;
-
+    margin-bottom: 30px;
     border: none;
     font-size: 16px;
     font-family: "Display xs/Semibold", sans-serif;
@@ -202,15 +261,16 @@ footer {
   .subtitulos {
     color: var(--color-titulos);
     font-size: 20px;
-    padding-left: 32px;
+    padding-left: 132px;
   }
   .card_1 {
     display: grid;
-    padding: 32px 32px 96px 32px;
+    padding: 32px 32px 90px 132px;
+    width: 90%;
     grid-template-areas:
       "a b"
       "a c";
-    gap: 32px;
+    gap: 8%;
   }
 
   .card_1 img {
@@ -228,13 +288,13 @@ footer {
   }
 
   .card_1 article:first-child img {
-    width: 592px;
-    height: 228px;
+    width: 100%;
+    height: 338px;
   }
 
   .card_2 {
     display: grid;
-    padding: 32px 32px 96px 32px;
+    padding: 32px 32px 96px 132px;
     grid-template-areas:
       "a b c"
       "d e f";
@@ -242,15 +302,20 @@ footer {
   }
 
   .card_2 img {
-    width: 350px;
+    width: 370px;
     height: 220px;
   }
-
-  
 
   .paginacion {
     text-align: center;
     margin-top: 20px;
+  }
+  .title{
+    width: 60%;
+  }
+
+  .card_2 .descrip{
+    width: 60%;
   }
 
   .paginacion ul {
@@ -272,6 +337,12 @@ footer {
   .paginacion {
     display: flex;
   }
+
+  h6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
   #paginado{
     display: none;
@@ -286,9 +357,7 @@ footer {
       "a b c";
     gap: 32px;
   }
-  
-  
-  
+
   .flechas {
     display: flex;
     flex-direction: row;
@@ -301,5 +370,11 @@ footer {
   .card_2 article:nth-child(n+4){
     display: inline
   }
+
+  .card_1 .article-card:nth-child(n+2){
+    display: flex;
+    height: 20px;
+    width: 95%;
+   }
 }
 

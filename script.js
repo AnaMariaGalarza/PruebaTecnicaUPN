@@ -24,12 +24,12 @@ function renderizarFetch(url, card){
 
 function renderizarInfo(info) {
     return `
-        <article>
+        <article class="article-card">
             <img src= "${info.imagen}" alt= "${info.nombre}">
             <article>
                 <h5>${info.autor} • ${info.fecha}</h5>
-                <h3>${info.nombre}<i class="arrow fa-solid fa-arrow-up-right-from-square"></i></h3>
-                <p>${info.descripcion}</p>
+                <h3 class="title">${info.nombre}<i class="arrow fa-solid fa-arrow-up-right-from-square"></i></h3>
+                <p class="descrip">${info.descripcion}</p>
                 <ul>${renderizarEtiquetas(info.etiquetas)}</ul> 
             <article> 
         </article>
@@ -56,21 +56,36 @@ function crearPaginacion() {
     const paginasTotales = 10; 
     let paginaActual = 1;
 
+    let seccion1 = Math.floor(paginasTotales / 3);
+    let seccion2 = paginasTotales - seccion1;
+
     paginationList.innerHTML = "";
 
     for (let i = 1; i <= paginasTotales; i++) {
 
-        const listItem = document.createElement("li");
-        listItem.textContent = i;
-        if (i === paginaActual) {
-            listItem.classList.add("active");
+        if (i <= seccion1 || i > seccion2) {
+
+            const listItem = document.createElement("li");
+            listItem.textContent = i;
+            if (i === paginaActual) {
+                listItem.classList.add("active");
+            }
+            listItem.addEventListener("click", () => {
+                paginaActual = i;
+                crearPaginacion();
+            });
+            paginationList.appendChild(listItem);
+
+        } else if (i === seccion1 + 1) {
+                
+            const listItem = document.createElement("li");
+            listItem.textContent = "...";
+            paginationList.appendChild(listItem);
+
         }
-        listItem.addEventListener("click", () => {
-            paginaActual = i;
-            crearPaginacion();
-        });
-        paginationList.appendChild(listItem);
     }
+
+
 }
 
 renderizarFetch(API_URL1, card1);
